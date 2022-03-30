@@ -1,0 +1,18 @@
+* SEQM.mqsc
+* (c) Copyright IBM Corp. firstyr, updatedyr 
+* 
+* US Government Users Restricted Rights - Use duplication or
+* disclosure restricted by GSA ADP Schedule Contract with
+* IBM Corp
+*
+* This script disables authentication and creates a 
+* dead-letter queue
+
+
+ALTER QMGR CHLAUTH(DISABLED)
+
+ALTER QMGR CONNAUTH(' ')
+
+REFRESH SECURITY
+
+DEF QL(DLQ) REPLACE
